@@ -29,7 +29,7 @@ SOURCES = $(shell find . -name '*.md')
 
 PANDOC_FLAGS =\
 	--template template.tex \
-	-f markdown+tex_math_single_backslash \
+	-f markdown+tex_math_single_backslash+abbreviations \
 	-t latex \
 
 LATEX_FLAGS = \

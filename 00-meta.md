@@ -2,7 +2,7 @@
 #documentclass: article
 documentclass: report
 classoption:
-#- twocolumn
+# - twocolumn
 - twosides
 title: Aleph, a decentralized application network
 author: Moshe Malawach (<moshe.malawach@protonmail.com>)
