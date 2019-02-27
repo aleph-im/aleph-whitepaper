@@ -3,10 +3,22 @@ references:
 - type: webpage
   id: coinmarketcap
   title: coinmarketcap
-  url: https://coinmarketcap.com/all/views/all/
+  URL: https://coinmarketcap.com/all/views/all/
   accessed:
     date-parts:
     - - 2019
       - 2
       - 27
+- type: post-weblog
+  id: kyledrake
+  title: HTTP is obsolete. It's time for the distributed, permanent web
+  author:
+    family: Drake
+    given: Kyle
+  URL: https://ipfs.io/ipfs/QmNhFJjGcMPqpuYfxL62VVB9528NXqDNMFXiqN5bgFYiZ1/its-time-for-the-permanent-web.html
+  issued:
+    date-parts:
+    - - 2015
+      - 9
+      - 8
 ...

@@ -22,6 +22,7 @@ keywords:
 - blockchain
 watermark: incomplete draft
 toc: false
+tables: true
 # toc: true
 colorlinks: true
 linkcolor: RoyalBlue
