@@ -32,6 +32,8 @@ SOURCES = *.md chapters/*.md
 PANDOC_FLAGS =\
 	--template template.tex \
 	--filter $(MERMAID_BIN) \
+        --filter pandoc-citeproc \
+        --bibliography biblio.yaml \
 	-f markdown+tex_math_single_backslash+abbreviations+pipe_tables \
 	-t latex \
 

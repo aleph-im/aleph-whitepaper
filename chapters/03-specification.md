@@ -26,28 +26,22 @@ Once the data signature is verified, and it is broadcasted to at least 2 nodes i
 
 ## Data type
 
-Aggregates
+----------------------------------------------------------------------------------------------------------------------------------
+Data Type      Description               Details
+-------------- ------------------------- -----------------------------------------------------------------------------------------
+**Aggregates** Key-value store linked    Each key can be updated separately, and its content is merged with previous.
+               to an account[^3]             *Example*: user profile
 
-:          key-value store linked to an account (an address of an underlying blockchain).
-    Each key can be updated separately, and its content is merged with previous.
-    
-    *Example:* user profile
+**Posts**      Single data entry         Has a type field, an optional ref (reference) field that references another
+                                         post or application-specific string.
+                                         Can be amended with new posts with type "amend" and ref to the previous post
+                                         *Example:* blog post, comment, picture gallery, video entry, new data point, new event...
 
-Posts
+**VM State**   State of a virtual        Fields depending on underlying engine
+               machine                   (dockerized language-specific contracts or WASM for example)
+----------------------------------------------------------------------------------------------------------------------------------
 
-:          Single data entry
-    
-    Has a type field, an optional ref (reference) field that references another post or application-specific string.
-    
-    Can be amended with new posts with type "amend" and ref to the previous post
-    
-    *Example:* blog post, comment, picture gallery, video entry, new data point, new event...
-
-VM State
-
-:          State of a virtual machine.
-    
-    Fields depending on underlying engine (dockerized language-specific contracts or WASM)
+Table: Data types
 
 ## Data exchange
 
@@ -65,3 +59,7 @@ State encompasses both onchain committed data and uncommitted data received by p
 - For smart contracts/VMs, it should be recomputed from last committed, signed and non revoked (no litigation) onchain state.
 - For aggregates (user hash tables) from the last onchain commit for each key.
 - For posts, from the original post plus all the amends. If last amend contains all the fields, original plus last amend is acceptable.
+
+[^3]: Underlying blockchain of choice address and linked public key.
+
+

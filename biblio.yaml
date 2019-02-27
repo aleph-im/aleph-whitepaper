@@ -1,0 +1,12 @@
+---
+references:
+- type: webpage
+  id: coinmarketcap
+  title: coinmarketcap
+  url: https://coinmarketcap.com/all/views/all/
+  accessed:
+    date-parts:
+    - - 2019
+      - 2
+      - 27
+...

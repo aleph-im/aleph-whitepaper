@@ -4,6 +4,7 @@ documentclass: report
 classoption:
 # - twocolumn
 - oneside
+- notitlepage
 title: Aleph, a decentralized application network
 author: Moshe Malawach (<moshe.malawach@protonmail.com>)
 date: \today
@@ -25,6 +26,7 @@ toc: false
 colorlinks: true
 linkcolor: RoyalBlue
 urlcolor: RoyalBlue
+link-citations: true
 abstract:
     This will be a great abstract when I finally get around to writing it.
 ---

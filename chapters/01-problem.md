@@ -9,3 +9,4 @@ What is our internet today? Silos loosely connected together, users having data 
 There is a lot of attempts at breaking those silos, from connection from silo to silo (iftt, rgpd for data request, opendata programs...), to decentralized networks of silos (mastodon). We are living in a world of data silos.
 
 In itself, it isn't bad. If those silos were easily accessible, and decentralized. Users don't know it, but they need to reclaim their data.
+
