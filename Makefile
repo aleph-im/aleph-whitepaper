@@ -32,7 +32,7 @@ SOURCES = *.md chapters/*.md
 PANDOC_FLAGS =\
 	--template template.tex \
 	--filter $(MERMAID_BIN) \
-	-f markdown+tex_math_single_backslash+abbreviations \
+	-f markdown+tex_math_single_backslash+abbreviations+pipe_tables \
 	-t latex \
 
 LATEX_FLAGS = \
