@@ -23,12 +23,15 @@
 # ============================================================================
 
 
+MERMAID_BIN = node_modules/.bin/mermaid-filter
 TARGET = aleph-whitepaper
 
-SOURCES = $(shell find . -name '*.md')
+#SOURCES = $(shell find . -name '*.md')
+SOURCES = *.md chapters/*.md
 
 PANDOC_FLAGS =\
 	--template template.tex \
+	--filter $(MERMAID_BIN) \
 	-f markdown+tex_math_single_backslash+abbreviations \
 	-t latex \
 
