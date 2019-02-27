@@ -3,7 +3,7 @@
 documentclass: report
 classoption:
 # - twocolumn
-- twosides
+- oneside
 title: Aleph, a decentralized application network
 author: Moshe Malawach (<moshe.malawach@protonmail.com>)
 date: \today
@@ -19,6 +19,7 @@ keywords:
 - ipfs
 - dht
 - blockchain
+watermark: incomplete draft
 toc: false
 # toc: true
 colorlinks: true

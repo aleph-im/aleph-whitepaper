@@ -230,6 +230,14 @@ $if(institute)$
 $endif$
 \date{$date$}
 
+% To display watermarks
+
+$if(watermark)$
+\usepackage{draftwatermark}
+\SetWatermarkText{$watermark$}
+% \SetWatermarkScale{5}
+$endif$
+
 \begin{document}
 $if(title)$
 \maketitle
