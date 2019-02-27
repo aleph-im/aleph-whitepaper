@@ -26,8 +26,6 @@ colorlinks: true
 linkcolor: RoyalBlue
 urlcolor: RoyalBlue
 abstract:
-    blah blah
-
-    bluh bluh
+    This will be a great abstract when I finally get around to writing it.
 ---
 
