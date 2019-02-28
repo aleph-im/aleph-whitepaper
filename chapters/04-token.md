@@ -36,11 +36,12 @@ Of those :
   - 400M will be airdropped (most likely to NULS token holders, details will be anounced through official channels),
   - 600M to the Aleph team (who might be able to sell some in OTC trades for development funding and/or allocate a part for a community or foundation fund)
 
-```{.python .run caption="Token Distribution" label="my_fig" hide_code=True}
+```{.python .run caption="Token Distribution" label="allocation_fig" hide_code=True}
 import matplotlib
 matplotlib.use('AGG')
 # import seaborn as sns
 from matplotlib import pyplot as plt
+fig = plt.figure()
 
 # create data
 names='Airdrop\n400M', 'Reserved\n600M',
@@ -64,6 +65,41 @@ Through the described rewards the token supply will approximately grow by 10% th
 |total supply eoy|   1100M|   1188M|   1259M|   1309M|   1362M|   1416M|
 
 While the part devoted to the team and developement may seem high on issuance, the inflation rate makes it lower than the rest of the circulating supply during the 3rd year.
+
+```{.python .run caption="Supply evolution (unit: million tokens and percents)" label="supply_evolution_fig" hide_code=True}
+import matplotlib
+matplotlib.use('AGG')
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+plt.figure()
+
+
+# plt.style.use('fivethirtyeight')
+
+year_percents = [10, 8, 6, 4, 4, 4]
+new_tokens = []
+supply = []
+last_supply = 1000
+for perc in year_percents:
+    minted = last_supply * (perc/100)
+    new_tokens.append(minted)
+    last_supply += minted
+    supply.append(last_supply)
+
+y = [[1000]+supply[:-1], new_tokens]
+
+y_pos = np.arange(len(year_percents))
+
+plt.stackplot(y_pos,y, labels=['Supply', 'Newly minted'])
+
+#fig, ax = plt.subplots()
+plt.plot(y_pos, year_percents, label="Inflation rate")
+plt.legend()
+#ax.set_title("'fivethirtyeight' style sheet")
+```
+
 
 
 

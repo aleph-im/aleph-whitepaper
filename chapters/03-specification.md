@@ -53,16 +53,17 @@ Pubsub is using dht and ensuring all subscribed nodes will receive all users pos
 
 ```mermaid
 graph LR
+    linkStyle default interpolate basis
     A(New content on client) --> B[New IPFS Hash]
     B --> C[IPFS Hash signed]
     C --> D{Client supports direct p2p}
     D -- Yes --> E1[Posts via pubsub]
     D -- No --> E2[Posts via API]
     E2 --> E3[API Server posts via pubsub]
-    E3 --> F(Nodes add post to queue)
+    E3 --> F[Signature verification]
     E1 --> F
+    F --> E(Nodes add post to queue)
 ```
-
 
 ## State
 
@@ -71,6 +72,17 @@ State encompasses both onchain committed data and uncommitted data received by p
 - For smart contracts/VMs, it should be recomputed from last committed, signed and non revoked (no litigation) onchain state.
 - For aggregates (user hash tables) from the last onchain commit for each key.
 - For posts, from the original post plus all the amends. If last amend contains all the fields, original plus last amend is acceptable.
+ 
+```mermaid
+graph LR
+    linkStyle default interpolate basis
+    A(Objects stored on chain) --1st--> C
+    B(Objects in the queue) --2nd--> C
+    C(State stack) --> D[Compute state with amends and layers]
+    D --> E(Current state)
+```
+
+
 
 [^3]: Underlying blockchain of choice address and linked public key.
 
