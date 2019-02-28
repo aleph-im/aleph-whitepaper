@@ -51,7 +51,7 @@ Using pubsub all nodes will get the user posts and actions.
 
 Pubsub is using dht and ensuring all subscribed nodes will receive all users posts to get the current state.
 
-```mermaid
+```{.mermaid caption="Data posting procedure"}
 graph LR
     linkStyle default interpolate basis
     A(New content on client) --> B[New IPFS Hash]
@@ -73,7 +73,7 @@ State encompasses both onchain committed data and uncommitted data received by p
 - For aggregates (user hash tables) from the last onchain commit for each key.
 - For posts, from the original post plus all the amends. If last amend contains all the fields, original plus last amend is acceptable.
  
-```mermaid
+```{.mermaid caption="State composition"}
 graph LR
     linkStyle default interpolate basis
     A(Objects stored on chain) --1st--> C

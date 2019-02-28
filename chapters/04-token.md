@@ -41,7 +41,6 @@ import matplotlib
 matplotlib.use('AGG')
 # import seaborn as sns
 from matplotlib import pyplot as plt
-fig = plt.figure()
 
 # create data
 names='Airdrop\n400M', 'Reserved\n600M',
@@ -67,16 +66,16 @@ Through the described rewards the token supply will approximately grow by 10% th
 While the part devoted to the team and developement may seem high on issuance, the inflation rate makes it lower than the rest of the circulating supply during the 3rd year.
 
 ```{.python .run caption="Supply evolution (unit: million tokens and percents)" label="supply_evolution_fig" hide_code=True}
-import matplotlib
-matplotlib.use('AGG')
+#import matplotlib
+#matplotlib.use('AGG')
 
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 import numpy as np
+import seaborn
 
 plt.figure()
 
-
-# plt.style.use('fivethirtyeight')
+plt.style.use('seaborn-paper')
 
 year_percents = [10, 8, 6, 4, 4, 4]
 new_tokens = []
