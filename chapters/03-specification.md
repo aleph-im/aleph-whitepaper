@@ -51,6 +51,11 @@ Using pubsub all nodes will get the user posts and actions.
 
 Pubsub is using dht and ensuring all subscribed nodes will receive all users posts to get the current state.
 
+```mermaid
+graph LR
+    id1[This is the text in the box]
+```
+
 
 ## State
 
@@ -61,5 +66,7 @@ State encompasses both onchain committed data and uncommitted data received by p
 - For posts, from the original post plus all the amends. If last amend contains all the fields, original plus last amend is acceptable.
 
 [^3]: Underlying blockchain of choice address and linked public key.
+
+
 
 

@@ -1,3 +1,8 @@
-#container > svg {
+/*#container > svg {
     max-width: 100% !important;
+}*/
+@media print{
+  @page {
+    size: landscape
+  }
 }

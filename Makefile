@@ -23,7 +23,8 @@
 # ============================================================================
 
 
-MERMAID_BIN = node_modules/.bin/mermaid-filter
+#MERMAID_BIN = node_modules/.bin/mermaid-filter
+MERMAID_BIN = node_modules/.bin/mmdc
 TARGET = aleph-whitepaper
 
 #SOURCES = $(shell find . -name '*.md')
@@ -31,7 +32,7 @@ SOURCES = *.md chapters/*.md
 
 PANDOC_FLAGS =\
 	--template template.tex \
-	--filter $(MERMAID_BIN) \
+        --filter=filters/pandoc-mermaid.py \
         --filter pandoc-citeproc \
         --bibliography biblio.yaml \
 	-f markdown+tex_math_single_backslash+abbreviations+pipe_tables \
@@ -56,7 +57,7 @@ $(TARGET).tex: $(SOURCES) template.tex
 	pandoc --standalone $(PANDOC_FLAGS) -o $@ $(SOURCES)
 
 clean:
-	rm -f *.aux *.log *.nav *.out *.snm *.toc *.vrb tags || true
+	rm -f *.aux *.log *.nav *.out *.snm *.toc *.vrb mermaid-images/*.pdf tags || true
 
 veryclean: clean
 	rm -f $(TARGET).pdf
