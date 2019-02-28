@@ -53,7 +53,7 @@ Pubsub is using dht and ensuring all subscribed nodes will receive all users pos
 
 ```mermaid
 graph LR
-    id1[This is the text in the box]
+    id1{This is the text in the box}
 ```
 
 

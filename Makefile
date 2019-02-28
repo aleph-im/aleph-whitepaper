@@ -34,6 +34,7 @@ PANDOC_FLAGS =\
 	--template template.tex \
         --filter=filters/pandoc-mermaid.py \
         --filter pandoc-citeproc \
+        --filter filter_pandoc_run_py \
         --bibliography biblio.yaml \
 	-f markdown+tex_math_single_backslash+abbreviations+pipe_tables \
 	-t latex \
