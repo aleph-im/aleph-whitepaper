@@ -63,9 +63,11 @@ Through the described rewards the token supply will approximately grow by 10% th
 |   tokens minted|    100M|     88M|  71.28M|  50.37M|  52.38M|  54.48M|
 |total supply eoy|   1100M|   1188M|   1259M|   1309M|   1362M|   1416M|
 
+Table: Supply per year
+
 While the part devoted to the team and developement may seem high on issuance, the inflation rate makes it lower than the rest of the circulating supply during the 3rd year.
 
-```{.python .run caption="Supply evolution (unit: million tokens and percents)" label="supply_evolution_fig" hide_code=True}
+```{.python .run caption="Supply evolution" label="supply_evolution_fig" hide_code=True}
 #import matplotlib
 #matplotlib.use('AGG')
 
@@ -73,9 +75,12 @@ While the part devoted to the team and developement may seem high on issuance, t
 import numpy as np
 import seaborn
 
-plt.figure()
+#plt.figure()
 
-plt.style.use('seaborn-paper')
+#plt.style.use('seaborn-paper')
+
+
+fig, ax1 = plt.subplots()
 
 year_percents = [10, 8, 6, 4, 4, 4]
 new_tokens = []
@@ -91,11 +96,24 @@ y = [[1000]+supply[:-1], new_tokens]
 
 y_pos = np.arange(len(year_percents))
 
-plt.stackplot(y_pos,y, labels=['Supply', 'Newly minted'])
+pal = seaborn.color_palette("Blues")
 
+ax1.stackplot(y_pos,y, labels=['Supply', 'Newly minted'], colors=pal)
+ax2 = plt.twinx()
 #fig, ax = plt.subplots()
-plt.plot(y_pos, year_percents, label="Inflation rate")
-plt.legend()
+ax2.plot(y_pos, year_percents, label="Inflation rate", color="G")
+
+lines, labels = ax1.get_legend_handles_labels()
+lines2, labels2 = ax2.get_legend_handles_labels()
+ax2.legend(lines + lines2, labels + labels2, loc=0)
+
+
+ax1.set_xlabel("Year")
+ax1.set_ylabel("Supply (Million tokens)")
+ax1.set_ylim(0, 2000)
+ax2.set_ylabel("Inflation (%)")
+ax2.set_ylim(0, 15)
+
 #ax.set_title("'fivethirtyeight' style sheet")
 ```
 
