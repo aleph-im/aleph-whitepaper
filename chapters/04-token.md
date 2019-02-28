@@ -39,10 +39,11 @@ Of those :
 ```{.python .run caption="Token Distribution" label="my_fig" hide_code=True}
 import matplotlib
 matplotlib.use('AGG')
+# import seaborn as sns
 from matplotlib import pyplot as plt
 
 # create data
-names='Airdrop\n400M', 'Aleph Team\n600M',
+names='Airdrop\n400M', 'Reserved\n600M',
 size=[400,600]
  
 # Create a circle for the center of the plot

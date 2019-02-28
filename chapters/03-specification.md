@@ -53,7 +53,14 @@ Pubsub is using dht and ensuring all subscribed nodes will receive all users pos
 
 ```mermaid
 graph LR
-    id1{This is the text in the box}
+    A(New content on client) --> B[New IPFS Hash]
+    B --> C[IPFS Hash signed]
+    C --> D{Client supports direct p2p}
+    D -- Yes --> E1[Posts via pubsub]
+    D -- No --> E2[Posts via API]
+    E2 --> E3[API Server posts via pubsub]
+    E3 --> F(Nodes add post to queue)
+    E1 --> F
 ```
 
 

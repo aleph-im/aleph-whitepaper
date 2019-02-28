@@ -58,7 +58,7 @@ $(TARGET).tex: $(SOURCES) template.tex
 	pandoc --standalone $(PANDOC_FLAGS) -o $@ $(SOURCES)
 
 clean:
-	rm -f *.aux *.log *.nav *.out *.snm *.toc *.vrb mermaid-images/*.pdf tags || true
+	rm -f *.aux *.log *.nav *.out *.snm *.toc *.vrb mermaid-images/*.pdf mermaid-images/*.mmd tags || true
 
 veryclean: clean
 	rm -f $(TARGET).pdf
