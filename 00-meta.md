@@ -20,14 +20,17 @@ keywords:
 - ipfs
 - dht
 - blockchain
+lof: true
+lot: true
 watermark: incomplete draft
-toc: false
 tables: true
-# toc: true
+biblio-title: References
+toc: true
+numbersections: true
 colorlinks: true
 linkcolor: RoyalBlue
 urlcolor: RoyalBlue
-link-citations: true
+link-citations: true 
 abstract:
     This will be a great abstract when I finally get around to writing it.
 ---

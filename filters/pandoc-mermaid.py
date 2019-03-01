@@ -30,7 +30,7 @@ def mermaid(key, value, format_, _):
                     f.write(txt)
 
                 # Default command to execute
-                cmd = [MERMAID_BIN, "-i", src, "-o", dest]
+                cmd = [MERMAID_BIN, "-t", "forest", "-i", src, "-o", dest]
 
                 if PUPPETEER_CFG is not None:
                     cmd.extend(["-p", PUPPETEER_CFG])
