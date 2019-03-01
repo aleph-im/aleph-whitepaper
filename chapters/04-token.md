@@ -19,9 +19,12 @@ Alternatively, application users can pay themselves for the storage of their dat
 
 ## Token details
 
-The first issuance of the Aleph utility token will be made as an NRC-20 token, which will be able to be swapped for the native asset at a later date.
+The first issuance of the Aleph utility token will be made as an NRC-20 token first, which will be able to be swapped for the native asset at a later date.
 
-If technically possible, the switch between nrc-20 and native aleph token will be available in both directions.
+If technically possible (part under research):
+
+- the switch between nrc-20 and native aleph token will be available in both directions.
+- the token will also be made available as an erc-20 token
 
 ## Initial token distribution
 
@@ -55,7 +58,7 @@ p.gca().add_artist(my_circle)
 
 ## Supply evolution
 
-Through the described rewards the token supply will approximately grow by 10% the first year, then the inflation rate will decrease by 2% each year until it reaches 4% per year and stays at that value.
+Once the full network is ready (see roadmap chapter) and through the described rewards the token supply will approximately grow by 10% the first year, then the inflation rate will decrease by 2% each year until it reaches 4% per year and stays at that value.
 
 |                |1st year|2nd year|3rd year|4th year|5th year|6th year|
 |---------------:|-------:|-------:|-------:|-------:|-------:|-------:|
