@@ -37,7 +37,7 @@ To reward the NULS community and ecosystem, a big part of the supply will be air
 Of those :
 
   - 400M will be airdropped (most likely to NULS token holders, details will be anounced through official channels),
-  - 600M to the Aleph team (who might be able to sell some in OTC trades for development funding and/or allocate a part for a community or foundation fund)
+  - 600M to the Aleph team (who will use this for bootstrap period rewards, might be able to sell some for development funding, allocate a part for a community or foundation fund or any other use it might deem necessary)
 
 ```{.python .run caption="Token Distribution" label="allocation_fig" hide_code=True}
 import matplotlib

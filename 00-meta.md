@@ -9,7 +9,7 @@ title: Aleph, a decentralized application network
 author: Moshe Malawach (<moshe.malawach@protonmail.com>)
 date: \today
 geometry: margin=1in
-fontsize: 12pt
+fontsize: 11pt
 fontfamily: ebgaramond-maths
 monofont: Menlo
 newtxmathoptions:

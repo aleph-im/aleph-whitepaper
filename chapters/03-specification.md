@@ -116,6 +116,30 @@ graph LR
 Sometime called smart contracts, the virtual machines have a state that is commited as an object in the chain.
 All nodes don't need to keep all the VMs states, only the last one if no litigation happened.
 
+### Hash links
+
+Each mutation to a vm state contains a relation to previous state (previous hash), if two data blocks relate to the same hash, the first to be commited on-chain will prevail (in case of data sync), to be received (in case of off-chain processing before block inclusion).
+
+In the event where a new block is posted with a different history than what is computed off-chain, there is two possibilities:
+
+- On-chain content is deemed bad (according to specific rules) and discarded in a new commited transaction, off chain content taking its place,
+- Off-chain content is discarded and clients notified
+
+### VM State content
+
+The VM state object is specific to the engine used (WASM, docker-like language specific VM, JVM...), but typically contains:
+
+- Relation to previous state (object chain using hashes)
+- Function called
+- Arguments
+- Function result
+- New serialized state (can be a diff only for big states, in special cases)
+
+### Concurrency
+
+While view-only functions that don't modify the state can be done concurrently, the write functions can't happen concurrently (or will end up in a fork). 
+A node can send a pubsub message to broadcast it is working on/executing a "write"  function on a specific VM, then once it's done, it will broadcast the new state to the other nodes in the same pubsub channel that will be able to take on from this point in history if they also have a write function to execute.
+
 ## Cross-application data exchange and data ownership
 
 All applications in the Aleph ecosystem are talking to the same data storage.
