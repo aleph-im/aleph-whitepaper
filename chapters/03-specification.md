@@ -63,7 +63,8 @@ Data Type      Description               Details
 
 **Posts**      Single data entry         Has a type field, an optional ref (reference) field that references another
                                          post or application-specific string.
-                                         Can be amended with new posts with type "amend" and ref to the previous post
+                                         Can be amended with new posts with type "amend" and ref to the previous post.
+                                         Data inside post content can be optionally encrypted with either owner key or a recipient key.
                                          *Example:* blog post, comment, picture gallery, video entry, new data point, new event...
 
 **VM State**   State of a virtual        Fields depending on underlying engine
@@ -185,3 +186,4 @@ Those nodes must be API nodes too, and can be, optionally packing nodes too.
 They get rewarded in tokens for their duty.
 
 [^3]: Underlying blockchain of choice address and linked public key.
+
