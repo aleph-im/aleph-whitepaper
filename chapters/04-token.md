@@ -11,6 +11,8 @@ Of those rewards, a part will come from monetary creation, and a part from dApp 
 
 If a dApp owner wants to get the benefit of the network without having to rely on third parties only, he can run a node of the network where he prioritize his dApp data (but can't ignore completely others, having a backup for his users on other nodes, while he gives the same allowance to other dApps).
 
+There is no staking by itself in the Aleph network. The only ways to earn tokens are by providing service to the network, by running a storage or a packing node.
+
 ## Token use
 
 Most node owners will accept free storage of dApp data, especially at start of the network. Once the data grows bigger, and having all the data on all the hosts starts being impractical, dApp owners can pay for storage and writes to blockchain of his dApp data.

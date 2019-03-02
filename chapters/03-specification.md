@@ -160,10 +160,28 @@ For illegal content, network will also have its own storage, synchronised betwee
 
 To comply with regulations (GPDR in particular), in a similar fashion to the illegal content data unpinning, a user can request certain hashes he posted to be removed, or even his full address data to be put into blacklist by signing a message using his public key.
 
+## Nodes
 
+### Clients
+
+Simple clients to the network are either using the API to an API node or p2p pubsub connection to the network. If they are using the p2p system they can act like a full node and validate messages themselves (and run VM themselves if it's available for their platform, WASM working in web browsers).
+
+They should be careful to verify the signatures of the received messages and states if they don't trust the API server or if they are connected directly to the network.
+
+### Packing nodes
+
+The Packing nodes are those who validate the messages and submit their hashes to the underlying blockchains. They get rewarded for their action (token reward) or punished if they don't do their duty correctly.
+
+If a packing node is found doing nefarious actions by the consensus, its address is blacklisted and his rewards (and/or deposit, this is to be defined, see Roadmap chapter) frozen.
+
+Those nodes must be both API nodes and storage nodes too.
+
+### Storage nodes
+
+The storage nodes pin incoming IPFS hashes to ensure distributed (geographically and accross multiple hosts to ensure the data won't go away) storage of the content. 
+
+Those nodes must be API nodes too, and can be, optionally packing nodes too.
+
+They get rewarded in tokens for their duty.
 
 [^3]: Underlying blockchain of choice address and linked public key.
-
-
-
-
