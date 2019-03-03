@@ -27,6 +27,7 @@ $if(linestretch)$
 \setstretch{$linestretch$}
 $endif$
 \usepackage{amssymb,amsmath}
+
 \usepackage{ifxetex,ifluatex}
 \usepackage{fixltx2e} % provides \textsubscript
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
@@ -216,7 +217,11 @@ $endfor$
 \endorigfigure
 }
 $if(title)$
-\title{$title$$if(thanks)$\thanks{$thanks$}$endif$}
+\title{
+\fontsize{100}{10}\selectfont
+\[ \aleph_{im}  \]
+\Huge
+$title$$if(thanks)$\thanks{$thanks$}$endif$}
 $endif$
 $if(subtitle)$
 \providecommand{\subtitle}[1]{}
@@ -237,6 +242,9 @@ $if(watermark)$
 \SetWatermarkText{$watermark$}
 % \SetWatermarkScale{5}
 $endif$
+
+
+
 
 \begin{document}
 $if(title)$
