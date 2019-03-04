@@ -2,16 +2,15 @@
 
 ## Rewards
 
-Two main sources of reward and token creation are:
+Three main sources of reward and token creation are:
 
 - Reward each signed message written to underlying blockchain.
 - Reward storage of application data (pin items) and availability of API, both are mandatory for nodes.
+- POCM NULS token locking in NULS underlying chain (see token distribution secion)
 
 Of those rewards, a part will come from monetary creation, and a part from dApp owner incentive to prioritize their apps and their user fees.
 
 If a dApp owner wants to get the benefit of the network without having to rely on third parties only, he can run a node of the network where he prioritize his dApp data (but can't ignore completely others, having a backup for his users on other nodes, while he gives the same allowance to other dApps).
-
-There is no staking by itself in the Aleph network. The only ways to earn tokens are by providing service to the network, by running a storage or a packing node.
 
 ## Token use
 
@@ -38,7 +37,8 @@ To reward the NULS community and ecosystem, a big part of the supply will be air
 
 Of those :
 
-  - 400M will be airdropped (most likely to NULS token holders, details will be anounced through official channels),
+  - 150M will be airdropped (most likely to NULS token holders, details will be anounced through official channels),
+  - 250M will be reserved for an extra incentive on POCM mining program
   - 600M to the Aleph team (who will use this for bootstrap period rewards, might be able to sell some for development funding, allocate a part for a community or foundation fund or any other use it might deem necessary)
 
 ```{.python .run caption="Token Distribution" label="allocation_fig" hide_code=True}
@@ -47,9 +47,13 @@ matplotlib.use('AGG')
 # import seaborn as sns
 from matplotlib import pyplot as plt
 
+plt.figure()
+
+#plt.style.use('seaborn-paper')
+
 # create data
-names='Airdrop\n400M', 'Reserved\n600M',
-size=[400,600]
+names='Airdrop\n150M', 'POCM\n250M', 'Reserved\n600M',
+size=[150,250,600]
  
 # Create a circle for the center of the plot
 my_circle=plt.Circle( (0,0), 0.7, color='white')
@@ -57,6 +61,14 @@ plt.pie(size, labels=names, wedgeprops = { 'linewidth' : 7, 'edgecolor' : 'white
 p=plt.gcf()
 p.gca().add_artist(my_circle)
 ```
+
+### NULS staking program (POCM)
+
+In addition to a regular airdrop, NULS holders can lock a part of their NULS tokens to get Aleph tokens.
+
+While their tokens are locked, they will receive Aleph tokens based on the NULS amount they "staked"/"locked".
+
+Those tokens will come from an initial pool of 250M tokens, locked for that purpose. Once that pool dries up (after approximately 2-3 years), the reward will be lowered and the tokens minted using this program will be taken from the Supply Evolution.
 
 ## Supply evolution
 
