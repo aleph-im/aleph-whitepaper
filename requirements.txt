@@ -1,0 +1,1 @@
+-e git://github.com/caiofcm/filter_pandoc_run_py.git#egg=filter_pandoc_run_py

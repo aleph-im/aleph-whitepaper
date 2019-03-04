@@ -28,7 +28,7 @@ MERMAID_BIN = node_modules/.bin/mmdc
 TARGET = aleph-whitepaper
 
 #SOURCES = $(shell find . -name '*.md')
-SOURCES = *.md chapters/*.md
+SOURCES = 0*.md chapters/*.md
 
 PANDOC_FLAGS =\
 	--template template.tex \
