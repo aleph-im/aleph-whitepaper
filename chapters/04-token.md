@@ -43,11 +43,12 @@ Of those :
 
 ```{.python .run caption="Token Distribution" label="allocation_fig" hide_code=True}
 import matplotlib
-matplotlib.use('AGG')
 # import seaborn as sns
 from matplotlib import pyplot as plt
 
+matplotlib.use('PDF')
 plt.figure()
+#plt.use('PDF')
 
 #plt.style.use('seaborn-paper')
 
