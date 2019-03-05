@@ -1,5 +1,7 @@
 # Aleph Whiteper
 
+You can see the last build of the [WhitePaper PDF in this repository](aleph-whitepaper.pdf). Keep in mind it is still a work in progress, and any information found here is subject to change, supply and token distribution included.
+
 Before making, install linked tools:
 
 ```
