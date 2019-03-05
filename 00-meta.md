@@ -20,8 +20,8 @@ keywords:
 - ipfs
 - dht
 - blockchain
-lof: true
-lot: true
+lof: false
+lot: false
 watermark: incomplete draft
 tables: true
 biblio-title: References
