@@ -11,7 +11,7 @@ date: \today
 geometry: margin=1in
 fontsize: 11pt
 fontfamily: ebgaramond-maths
-monofont: Menlo
+#monofont: Menlo
 newtxmathoptions:
 - cmintegrals
 - cmbraces
