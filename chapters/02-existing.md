@@ -20,9 +20,9 @@ Storage networks like IPFS or Swarm are great to find a resource based on its ha
 Some things are currently needed or not easily useable for our dApps:
 
 - Incentivization of storage (to be implemented in their FileCoin for IPFS, implemented on ethereum for Swarm)
-- Unique resource naming system (provided in a very slow way currently by IPNS, or through Ethereum smart contracts in Swarm)
+- Unique resource naming system (provided in a slow way currently by IPNS, fix being worked on, or through Ethereum smart contracts in Swarm)
 
-```{.mermaid caption="Typical dApp using IPFS"}
+```{.mermaid caption="Typical smart-contract based dApp using IPFS"}
 graph LR
   User(User) --- Frontend(Frontend)
   Frontend --- APIS(API Server)
