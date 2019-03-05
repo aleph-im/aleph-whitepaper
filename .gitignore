@@ -3,6 +3,12 @@
 *.nav
 *.out
 *.snm
+*.mmd
 *.toc
 *.vrb
 tags
+mermaid-images
+plt-images
+node_modules
+src
+package-lock.json
