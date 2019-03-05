@@ -1,6 +1,6 @@
 # Introduction
 
-The Internet was originally built to connect computers together. It has been used as a marvelous communication and data storage model."Add a sentence here about how the internet has morphed to blockchain as a segway and then discuss the next sentence?" Protocols originally designed for decentralization are already showing their limitations.
+The Internet was originally built to connect computers together. It has been used as a marvelous communication and data storage model. Protocols originally designed for decentralization (TCP, HTTP, SMTP... and even blockchains) are already showing their limitations.
 
 In a purely economically driven world; simplicity, centralization, and non-standard data models tend to win out.
 
