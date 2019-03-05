@@ -1,0 +1,38 @@
+@media print
+{
+    * {-webkit-print-color-adjust:exact;}
+}
+
+.icon-node rect {
+  fill:transparent !important;
+  stroke:#FFFF00;
+  stroke-width: 0 !important;
+}
+
+
+.icon-node div {
+  text-align: center;
+}
+
+.icon-node div:before {
+  content: '';
+  background:url('../../images/cogwheels.svg');
+  width: 64px;
+  height: 64px;
+  display: block;
+  background-size: contain !important;
+  margin: 0 auto 5px auto;
+}
+
+.icon-node.ipfs div:before {
+  background:url('../../images/ipfs.svg');
+}
+
+.icon-node.i32 {
+  width: 32px;
+  height: 32px;
+}
+
+.icon-node.ileft:before {
+  float: left;
+}

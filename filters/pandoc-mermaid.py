@@ -30,7 +30,11 @@ def mermaid(key, value, format_, _):
                     f.write(txt)
 
                 # Default command to execute
-                cmd = [MERMAID_BIN, "-t", "forest", "-i", src, "-o", dest]
+                cmd = [MERMAID_BIN, "-i", src, "-o", dest]
+
+                cmd.extend(["-c", "filters/mermaid.json"])
+                cmd.extend(["-C", "filters/mermaid.css"])
+                cmd.extend(["-b", "transparent"])
 
                 if PUPPETEER_CFG is not None:
                     cmd.extend(["-p", PUPPETEER_CFG])
