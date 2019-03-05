@@ -18,6 +18,31 @@ There is a few main actions of the Aleph network:
 - API server decentralization
 - Virtual machines code execution and verification
 
+```mermaid
+graph LR
+
+  User(User) --- Frontend(Frontend)
+  Frontend --- APIS(API Servers)
+  Frontend --- P2PN(DHT-Based<br>P2P Network)
+  APIS --- ALP(Aleph Network)
+  P2PN --- ALP
+  ALP --- SVM(Smart VMs)
+  ALP --- STR(Distributed & Incentivized Storage)
+  STR --- IPFS
+  ALP --- BlockChain
+  
+  class User,Frontend,APIS,P2PN,ALP,SVM,STR,IPFS,BlockChain icon-node;
+  class User girl;
+  class Frontend web;
+  class APIS api;
+  class P2PN sat;
+  class SVM brain;
+  class STR hosting;
+  class ALP planets;
+  class IPFS ipfs;
+  class BlockChain blockchain;
+```
+
 ## Blockchains used by Aleph
 
 The first underlying blockchain supported by Aleph is NULS. 

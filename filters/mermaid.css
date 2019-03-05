@@ -28,6 +28,58 @@
   background:url('../../images/ipfs.svg');
 }
 
+.icon-node.man div:before {
+  background:url('../../images/003-boy.svg');
+}
+
+.icon-node.boy div:before {
+  background:url('../../images/001-man.svg');
+}
+
+.icon-node.girl div:before {
+  background:url('../../images/002-girl.svg');
+}
+
+.icon-node.api div:before {
+  background:url('../../images/api.svg');
+}
+
+.icon-node.web div:before {
+  background:url('../../images/monitor.svg');
+}
+
+.icon-node.blockchain div:before {
+  background:url('../../images/blockchain.svg');
+}
+
+.icon-node.sat div:before {
+  background:url('../../images/011-satellites.svg');
+}
+
+.icon-node.brain div:before {
+  background:url('../../images/048-brain.svg');
+}
+
+.icon-node.hosting div:before {
+  background:url('../../images/hosting.svg');
+}
+
+.icon-node.contract div:before {
+  background:url('../../images/letter-of-marque.svg');
+}
+
+.icon-node.server div:before {
+  background:url('../../images/server.svg');
+}
+
+.icon-node.database div:before {
+  background:url('../../images/database.svg');
+}
+
+.icon-node.planets div:before {
+  background:url('../../images/047-planets-2.svg');
+}
+
 .icon-node.i32 {
   width: 32px;
   height: 32px;

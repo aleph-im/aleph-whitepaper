@@ -1,3 +1,4 @@
 { 
+  "slowMo": 10,
   "args": ["--no-sandbox"]
 }

@@ -3,6 +3,7 @@
 import os
 import sys
 import subprocess
+import time
 
 from pandocfilters import toJSONFilter, Para, Image
 from pandocfilters import get_filename4code, get_caption, get_extension
@@ -51,6 +52,7 @@ def mermaid(key, value, format_, _):
 
                     subprocess.check_call(cmd)
                     sys.stderr.write('Cropped image ' + dest + '\n')
+                    time.sleep(.1)
 
             return Para([Image([ident, [], keyvals], caption, [dest, typef])])
 

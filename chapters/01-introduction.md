@@ -10,3 +10,15 @@ There are a lot of attempts at breaking those silos, from connection from silo t
 
 In itself, that isn't bad if those silos were easily accessible and decentralized. Users don't know it, but they need to reclaim their data.
 
+```{.mermaid caption="Typical centralized application"}
+graph LR
+  User --- Website
+  Website --- Database
+  Website --- CST("Centralized storage")
+
+  class User,Website,Database,CST icon-node;
+  class User man;
+  class Website web;
+  class CST server;
+  class Database database;
+```
