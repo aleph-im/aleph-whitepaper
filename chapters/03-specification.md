@@ -1,16 +1,16 @@
 # Aleph Architecture
 
-In the current solutions involving smart contracts, the current state of applications is written (or computed from) a blockchain, this is immutability. But what if you want instant actions, batching user requests for non critical things?
+In current solutions involving smart contracts, the current state of applications is written (or computed from) on a blockchain, this is immutability. But what if you want instantaneous actions, batching user requests for non critical items?
 
 You'll need a second layer of truth, a distributed state that you can influence by signing messages.
 
-Agents will then commit the messages on the blockchain for the users, incentivized by the network token. They will spend the native chain asset, and will receive the token in exchange for their service, given by the next authorized agent, who will verify that the work has been well done by the previous agent, changing it's credit score on the fly.
+Agents will then commit the messages on the blockchain for the users, incentivized by the network token. They will spend the native chain asset and will receive the token in exchange for their service, provided by the next authorized agent. Then that agents work will be verified by the previous agent, changing it's credit score on the fly.
 
-This allows for free and instant interaction with dapps for users, with efficient batched insert on the blockchain for immutability.
+This allows for free and instant interaction with dapps for users, with efficient batched inserts on the blockchain for immutability.
 
-Moreover, agents are running API servers that can be used by the dapps as entry points to the network.
+Moreover, this more easily facilitates agents running API servers that can be used by the dapps as entry points to the network.
 
-There is a few main actions of the Aleph network:
+Below are a few focal actions of the Aleph network:
 
 - Instant (low-latency) global status update
 - Bulk content write on blockchain to allow fee-less commits
@@ -46,21 +46,21 @@ graph LR
 ## Blockchains used by Aleph
 
 The first underlying blockchain supported by Aleph is NULS. 
-To allow easier port of existing dapps and ecosystems, later in the developement process, other blockchains can be supported like Ethereum, NEO and even the Bitcoin blockchain.
+To allow easier port of existing dapps and ecosystems, later in the developement process, other blockchains can be supported such as Ethereum, NEO and even the Bitcoin blockchain.
 
 The address in the Aleph network is the underlying network of choice (NULS, Ethereum, NEO...) address used to sign messages. A user can post in his personal aggregate (key-value hash table linked to his primary address) his addresses on other networks. That way he can redeem or receive tokens from other blockchains.
 
-If a user has a NULS account and an Ethereum account both linked together, a request for his aggregates (profile or settings for example), post (images, blog posts...) or any other linked content will return the same information from any of the two addresses.
+If a user has a NULS account and an Ethereum account both linked together, a request for his aggregates (profile or settings for example), posts (images, blog posts...), or any other linked content will return the same information from any of the two addresses.
 
 ## Data storage
 
-The hashes of the data are stored on chain, the data itself is stored encrypted or not on IPFS. Data is pinned by participating nodes.
+The hashes of the data are stored on chain. The data itself is stored encrypted or not on IPFS. Data is pinned by participating nodes.
 
 Posting is done either via API by the dapps to an API node, or by IPFS directly if available on the browser.
 
-Current state is stored on both blockchain (nodes are made of a blockchain explorer) and current received data that is not posted yet (queue, mempool).
+The current state is stored on both blockchain (nodes are made of a blockchain explorer) and current received data that is not posted yet (queue, mempool).
 
-Once the data signature is verified, and it is broadcasted to at least 2 nodes it is considered validated, and it will be included in the coming blocks.
+Once the data signature is verified, and it is broadcasted to at least 2 nodes, it is considered validated and included in the coming blocks.
 
 ```{.mermaid caption="Data posting procedure"}
 graph LR
@@ -83,7 +83,7 @@ graph LR
 ----------------------------------------------------------------------------------------------------------------------------------
 Data Type      Description               Details
 -------------- ------------------------- -----------------------------------------------------------------------------------------
-**Aggregates** Key-value store linked    Each key can be updated separately, and its content is merged with previous.
+**Aggregates** Key-value store linked    Each key can be updated separately and its content is merged with previous.
                to an account[^3]             *Example*: user profile
 
 **Posts**      Single data entry         Has a type field, an optional ref (reference) field that references another
@@ -100,9 +100,9 @@ Table: Data types
 
 ## Data exchange
 
-The exchange of data between the dapps and the nodes is done either by pubsub (if available) or API posting, and the node will do the pubsub action on behalf of the user.
+The exchange of data between the dapps and the nodes is done either by pubsub (if available) or API posting. The node will do the pubsub action on behalf of the user.
 
-Using pubsub all nodes will get the user posts and actions.
+Using pubsub, all nodes will get the user posts and actions.
 
 Pubsub is using dht and ensuring all subscribed nodes will receive all users posts to get the current state.
 
@@ -139,23 +139,23 @@ graph LR
 
 ## Virtual machines
 
-Sometime called smart contracts, the virtual machines have a state that is commited as an object in the chain.
-All nodes don't need to keep all the VMs states, only the last one if no litigation happened.
+Sometimes called smart contracts, the virtual machines have a state that is commited as an object in the chain.
+All nodes don't need to keep all the VM's states, only the last one if no litigation occurred.
 
 ### Hash links
 
-Each mutation to a vm state contains a relation to previous state (previous hash), if two data blocks relate to the same hash, the first to be commited on-chain will prevail (in case of data sync), to be received (in case of off-chain processing before block inclusion).
+Each mutation to a VM state contains a relation to a previous state (previous hash). If two data blocks relate to the same hash, the first to be commited on-chain will prevail (in case of data sync), and the first to be received (in case of off-chain processing before block inclusion).
 
-In the event where a new block is posted with a different history than what is computed off-chain, there is two possibilities:
+In the event a new block is posted with a different history than what is computed off-chain, two possibilities occurr:
 
-- On-chain content is deemed bad (according to specific rules) and discarded in a new commited transaction, off chain content taking its place,
-- Off-chain content is discarded and clients notified
+- On-chain content is deemed bad (according to specific rules) and discarded in a new commited transaction, off chain content taking its place
+- Off-chain content is discarded and clients are notified
 
 ### VM State content
 
 The VM state object is specific to the engine used (WASM, docker-like language specific VM, JVM...), but typically contains:
 
-- Relation to previous state (object chain using hashes)
+- Relation to the previous state (object chain using hashes)
 - Function called
 - Arguments
 - Function result
@@ -164,14 +164,14 @@ The VM state object is specific to the engine used (WASM, docker-like language s
 ### Concurrency
 
 While view-only functions that don't modify the state can be done concurrently, the write functions can't happen concurrently (or will end up in a fork). 
-A node can send a pubsub message to broadcast it is working on/executing a "write"  function on a specific VM, then once it's done, it will broadcast the new state to the other nodes in the same pubsub channel that will be able to take on from this point in history if they also have a write function to execute.
+A node can send a pubsub message to broadcast it is working on/executing a "write"  function on a specific VM. Once that has been completed, it will broadcast the new state to the other nodes in the same pubsub channel, thus enabling them to execute a write function from this point in history.
 
 ## Cross-application data exchange and data ownership
 
-All applications in the Aleph ecosystem are talking to the same data storage.
-Conventions exists and have to be documented on data structures to be used by applications.
+All applications in the Aleph ecosystem are talking to the same data storage entity.
+Conventions exist and have to be documented on data structures to be used by applications.
 
-That way applications can use the same user profiles (example nuls.space and nuls.world/social using the same profiles, and nuls.world/apps/vote using the profile and same post format than the formers for its content) and content sources if needed.
+This enables applications to use the same user profiles (example nuls.space and nuls.world/social using the same profiles, and nuls.world/apps/vote using the profile and same post format than the formers for its content) and content sources if needed.
 A new developer can come and make a new frontend to all the existing data posted by users. Users own their data.
 
 ## Moderation and requests for removal
@@ -180,7 +180,7 @@ A new developer can come and make a new frontend to all the existing data posted
 
 Each application can have its own storage of black-listed content and addresses to handle its own moderation features (the application will then omit certain content or content creators from the user interface).
 
-For illegal content, network will also have its own storage, synchronised between nodes of blacklisted content and addresses. Linked content hashes will be automatically unpinned from all nodes, leading to its destruction from the Aleph network.
+For illegal content, the network will also have its own storage that will be synchronised between nodes of blacklisted content and addresses. Linked content hashes will be automatically unpinned from all nodes, leading to its destruction from the Aleph network.
 
 ### Removal request
 
@@ -190,15 +190,15 @@ To comply with regulations (GPDR in particular), in a similar fashion to the ill
 
 ### Clients
 
-Simple clients to the network are either using the API to an API node or p2p pubsub connection to the network. If they are using the p2p system they can act like a full node and validate messages themselves (and run VM themselves if it's available for their platform, WASM working in web browsers).
+Simple clients to the network are either using the API to API node or p2p pubsub connection to the network. If they are using the p2p system then they can act like a full node and validate messages themselves (and run VM themselves if it's available for their platform, WASM working in web browsers).
 
 They should be careful to verify the signatures of the received messages and states if they don't trust the API server or if they are connected directly to the network.
 
 ### Packing nodes
 
-The Packing nodes are those who validate the messages and submit their hashes to the underlying blockchains. They get rewarded for their action (token reward) or punished if they don't do their duty correctly.
+The Packing nodes are those which validate the messages and submit their hashes to the underlying blockchains. They get rewarded for their action (token reward) or punished if they don't do their duty correctly.
 
-If a packing node is found doing nefarious actions by the consensus, its address is blacklisted and his rewards (and/or deposit, this is to be defined, see Roadmap chapter) frozen.
+If a packing node is found committing nefarious acts by the consensus, its address is blacklisted and his rewards (and/or deposit, this is to be defined, see Roadmap chapter) frozen.
 
 Those nodes must be both API nodes and storage nodes too.
 
@@ -206,9 +206,9 @@ Those nodes must be both API nodes and storage nodes too.
 
 The storage nodes pin incoming IPFS hashes to ensure distributed (geographically and accross multiple hosts to ensure the data won't go away) storage of the content. 
 
-Those nodes must be API nodes too, and can be, optionally packing nodes too.
+Those nodes must be API nodes and may optionally be packing nodes too.
 
-They get rewarded in tokens for their duty.
+They are rewarded in tokens for their duty.
 
 [^3]: Underlying blockchain of choice address and linked public key.
 
