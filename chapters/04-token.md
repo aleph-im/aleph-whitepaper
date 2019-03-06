@@ -4,40 +4,40 @@
 
 Three main sources of reward and token creation are:
 
-- Reward each signed message written to underlying blockchain.
-- Reward storage of application data (pin items) and availability of API, both are mandatory for nodes.
-- POCM NULS token locking in NULS underlying chain (see token distribution secion)
+- Reward each signed message written to the underlying blockchain
+- Reward storage of application data (pin items) and availability of API, both are mandatory for nodes
+- POCM NULS token locking in NULS underlying chain (see token distribution section)
 
 Of those rewards, a part will come from monetary creation, and a part from dApp owner incentive to prioritize their apps and their user fees.
 
-If a dApp owner wants to get the benefit of the network without having to rely on third parties only, he can run a node of the network where he prioritize his dApp data (but can't ignore completely others, having a backup for his users on other nodes, while he gives the same allowance to other dApps).
+If a dApp owner wants to get the benefit of the network without having to rely on third parties only, he can run a node of the network where he prioritizes his dApp data (but he can't completely ignore others, having a backup for his users on other nodes, while he gives the same allowance to other dApps).
 
 ## Token use
 
-Most node owners will accept free storage of dApp data, especially at start of the network. Once the data grows bigger, and having all the data on all the hosts starts being impractical, dApp owners can pay for storage and writes to blockchain of his dApp data.
+Most node owners will accept free storage of dApp data, especially at start of the network. Once the data grows bigger, and it begins to become impratical for hosts to have all the data, dApp owners can pay for storage and writes to the blockchain of his dApp data.
 
 Alternatively, application users can pay themselves for the storage of their data (example, big data volume like picture storage applications).
 
 ## Token details
 
-The first issuance of the Aleph utility token will be made as an NRC-20 token first, which will be able to be swapped for the native asset at a later date.
+Initially, the first issuance of the Aleph utility token will be made as an NRC-20 token. This will be able to be swapped for the native asset at a later date.
 
 If technically possible (part under research):
 
-- the switch between nrc-20 and native aleph token will be available in both directions.
-- the token will also be made available as an erc-20 token
+- the switch between NRC-20 and native Aleph token will be available in both directions.
+- the token will also be made available as an ERC-20 token
 
 ## Initial token distribution
 
-Exact details will be announced later on, here is the planned token distribution (can be subject to changes).
+The exact details of the initial token distribution plan will be announced at a later date. Below is what is currently planned for the token distribution (can be subject to changes).
 
-To reward the NULS community and ecosystem, a big part of the supply will be airdropped to NULS token holders.
+To reward the NULS community and ecosystem, a large percntage of the supply will be airdropped to NULS token holders.
 
 1,000,000,000 (1 billion) tokens will be issued initially.
 
 Of those :
 
-  - 150M will be airdropped (most likely to NULS token holders, details will be anounced through official channels),
+  - 150M will be airdropped (most likely to NULS token holders, details will be announced through official channels)
   - 250M will be reserved for an extra incentive on POCM mining program
   - 600M to the Aleph team (who will use this for bootstrap period rewards, might be able to sell some for development funding, allocate a part for a community or foundation fund or any other use it might deem necessary)
 
@@ -67,13 +67,13 @@ p.gca().add_artist(my_circle)
 
 In addition to a regular airdrop, NULS holders can lock a part of their NULS tokens to get Aleph tokens.
 
-While their tokens are locked, they will receive Aleph tokens based on the NULS amount they "staked"/"locked".
+While their tokens are locked, they will receive Aleph tokens based on the NULS amount they have "staked"/"locked".
 
-Those tokens will come from an initial pool of 250M tokens, locked for that purpose. Once that pool dries up (after approximately 2-3 years), the reward will be lowered and the tokens minted using this program will be taken from the Supply Evolution.
+Those tokens will come from an initial pool of 250M tokens, locked for that specific purpose. Once that pool dries up (after approximately 2-3 years), the reward will be lowered and the tokens minted using this program will be taken from the Supply Evolution.
 
 ## Supply evolution
 
-Once the full network is ready (see roadmap chapter) and through the described rewards the token supply will approximately grow by 10% the first year, then the inflation rate will decrease by 2% each year until it reaches 4% per year and stays at that value.
+Once the full network is ready (see roadmap chapter) and through the described rewards, the token supply will grow by approximately 10% the first year. Then the inflation rate will decrease by 2% each year until it reaches 4% per year and stay at that value.
 
 |                |1st year|2nd year|3rd year|4th year|5th year|6th year|
 |---------------:|-------:|-------:|-------:|-------:|-------:|-------:|
