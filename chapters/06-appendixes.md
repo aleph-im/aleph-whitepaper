@@ -1,4 +1,4 @@
-# Appendixes
+# Notes and appendices
 
 ## Hardware wallet and 2 factor support
 
