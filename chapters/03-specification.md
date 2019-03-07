@@ -220,7 +220,7 @@ The APIs are a module that can be activated (mandatory one for incentivized node
 
 Features of an Aleph Node:
 
-- Indexes the underlying blockchain it is configured for (can be more than 1)
+- Indexes the underlying blockchain it is configured for (can be more than 1).
 - Has an IPFS client built-in
 - Keeps track of modifications to the chain (forks, history rewrite...)
 - Connected to pubsub channels to update its off chain state
@@ -231,5 +231,5 @@ Features of an Aleph Node:
 
 Depending on the underlying chain volume, a full index will be done, or only an index based on specific events (triggered by a smart contract for example -on Ethereum-, a tx type -business data on NULS- or op_return & similar).
 
-For maximum security, the incentivized Aleph nodes in charge of sensitive parts of the network will connect to a local node of this blockchain (to detect forks for example), simpler nodes can connect to explorers or public api servers of those chains to act as light wallets.
+For maximum security, the incentivized Aleph nodes in charge of sensitive parts of the network will connect to a local node of this blockchain (to detect forks for example), simpler nodes can connect to explorers or public api servers of those chains to act as light wallets. The blocks informations will also be published on IPFS for faster sync of nodes.
 
