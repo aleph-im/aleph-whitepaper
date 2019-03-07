@@ -37,9 +37,10 @@ To reward the NULS community and ecosystem, a large percntage of the supply will
 
 Of those :
 
-  - 150M will be airdropped (most likely to NULS token holders, details will be announced through official channels)
-  - 250M will be reserved for an extra incentive on POCM mining program
-  - 600M to the Aleph team (who will use this for bootstrap period rewards, might be able to sell some for development funding, allocate a part for a community or foundation fund or any other use it might deem necessary)
+  - 100M will be airdropped (details will be announced through official channels)
+  - 500M will be reserved for the NULS community/foundation (400M locked for the POCM mining program and 100M for other incentives)
+  - 100M for private / institutionnal investors / OTC sales
+  - 300M to the Aleph team (who will use this for bootstrap period rewards, might be able to sell some for development funding, allocate a part for a community or foundation fund or any other use it might deem necessary)
 
 ```{.python .run caption="Token Distribution" label="allocation_fig" hide_code=True}
 import matplotlib
@@ -53,9 +54,9 @@ plt.figure()
 #plt.style.use('seaborn-paper')
 
 # create data
-names='Airdrop\n150M', 'POCM\n250M', 'Reserved\n600M',
-size=[150,250,600]
- 
+names=('Airdrop\n100M', 'NULS (POCM&Others)\n500M', 'Investors\n100M', 'Reserved\n300M',)
+size=[100,500,100,300]
+
 # Create a circle for the center of the plot
 my_circle=plt.Circle( (0,0), 0.7, color='white')
 plt.pie(size, labels=names, wedgeprops = { 'linewidth' : 7, 'edgecolor' : 'white' })
@@ -69,7 +70,7 @@ In addition to a regular airdrop, NULS holders can lock a part of their NULS tok
 
 While their tokens are locked, they will receive Aleph tokens based on the NULS amount they have "staked"/"locked".
 
-Those tokens will come from an initial pool of 250M tokens, locked for that specific purpose. Once that pool dries up (after approximately 2-3 years), the reward will be lowered and the tokens minted using this program will be taken from the Supply Evolution.
+Those tokens will come from an initial pool of 400M tokens, locked for that specific purpose. Once that pool dries up (after approximately 5 years), the reward will be lowered and the tokens minted using this program will be taken from the Supply Evolution.
 
 ## Supply evolution
 
@@ -134,9 +135,3 @@ ax2.set_ylim(0, 15)
 
 #ax.set_title("'fivethirtyeight' style sheet")
 ```
-
-
-
-
-
-
