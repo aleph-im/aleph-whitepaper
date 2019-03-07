@@ -212,3 +212,17 @@ They are rewarded in tokens for their duty.
 
 [^3]: Underlying blockchain of choice address and linked public key.
 
+### Full Node
+
+Packing and storage nodes are using this codebase, activating some modules and configuration to do their work.
+
+The APIs are a module that can be activated (mandatory one for incentivized nodes).
+
+Features of an Aleph Node:
+
+- Indexes the underlying blockchain it is configured for (can be more than 1)
+- Has an IPFS client built-in
+- Keeps track of modifications to the chain (forks, history rewrite...)
+- Connected to pubsub channels to update its off chain state
+- Retrieves IPFS content (from storage nodes or sender) commited onchain or recieved in pubsub to review and index content (and pins it if needed)
+- Executes VMs code (if configured for it, and only relevant ones)
