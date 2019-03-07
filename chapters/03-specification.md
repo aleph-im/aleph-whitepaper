@@ -226,3 +226,10 @@ Features of an Aleph Node:
 - Connected to pubsub channels to update its off chain state
 - Retrieves IPFS content (from storage nodes or sender) commited onchain or recieved in pubsub to review and index content (and pins it if needed)
 - Executes VMs code (if configured for it, and only relevant ones)
+
+#### Indexing
+
+Depending on the underlying chain volume, a full index will be done, or only an index based on specific events (triggered by a smart contract for example -on Ethereum-, a tx type -business data on NULS- or op_return & similar).
+
+For maximum security, the incentivized Aleph nodes in charge of sensitive parts of the network will connect to a local node of this blockchain (to detect forks for example), simpler nodes can connect to explorers or public api servers of those chains to act as light wallets.
+
