@@ -84,8 +84,6 @@ Once the full network is ready (see roadmap chapter) and through the described r
 
 Table: Supply per year
 
-While the part devoted to the team and developement may seem high on issuance, the inflation rate makes it lower than the rest of the circulating supply during the 3rd year.
-
 ```{.python .run caption="Supply evolution" label="supply_evolution_fig" hide_code=True }
 #import matplotlib
 #matplotlib.use('AGG')
