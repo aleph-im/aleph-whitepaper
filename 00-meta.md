@@ -22,7 +22,7 @@ keywords:
 - blockchain
 lof: false
 lot: false
-watermark: incomplete draft
+#watermark: incomplete draft
 tables: true
 biblio-title: References
 toc: true
