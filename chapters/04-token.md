@@ -37,7 +37,7 @@ To reward the NULS community and ecosystem, a large percntage of the supply will
 
 Of those :
 
-  - 150M will be airdropped (details will be announced through official channels)
+  - 150M will be devoted to airdrop, marketing and bounties (details of airdrop part will be announced through official channels)
   - 300M will be reserved for the NULS community/foundation (200M locked for the POCM mining program and 100M for other incentives)
   - 200M for private / institutionnal investors / OTC sales
   - 350M to the Aleph team (who will use this for bootstrap period rewards, might be able to sell some for development funding, allocate a part for a community or foundation fund or any other use it might deem necessary)
@@ -54,7 +54,7 @@ plt.figure()
 #plt.style.use('seaborn-paper')
 
 # create data
-names=('Airdrop\n150M', 'NULS (POCM&Others)\n300M', 'Investors\n200M', 'Reserved\n350M',)
+names=('Airdrop/Marketing/Bounties\n150M', 'NULS (POCM&Others)\n300M', 'Investors\n200M', 'Reserved\n350M',)
 size=[150,300,200,350]
 
 # Create a circle for the center of the plot
