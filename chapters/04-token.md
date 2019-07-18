@@ -54,7 +54,7 @@ plt.figure()
 #plt.style.use('seaborn-paper')
 
 # create data
-names=('Airdrop/Marketing/Bounties\n150M', 'NULS (POCM&Others)\n300M', 'Investors\n200M', 'Reserved\n350M',)
+names=('Airdrop, Marketing\n& Bounties\n150M', 'NULS (POCM&Others)\n300M', 'Investors\n200M', 'Reserved\n350M',)
 size=[150,300,200,350]
 
 # Create a circle for the center of the plot

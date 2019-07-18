@@ -52,3 +52,4 @@ There are a lot of possibilities for the future (not defined yet):
 - Decentralized exchanges and encapsulation of other assets
 - Use of Aleph as a monetary 2nd layer (like lightning or plasma)
 - ...
+
