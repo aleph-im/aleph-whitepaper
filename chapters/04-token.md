@@ -69,8 +69,9 @@ p.gca().add_artist(my_circle)
 In addition to a regular airdrop, NULS holders can lock a part of their NULS tokens to get Aleph tokens.
 
 While their tokens are locked, they will receive Aleph tokens based on the NULS amount they have "staked"/"locked".
+The reward will be higher at the start of the POCM period (approximately 10 years) and lower at the end.
 
-Those tokens will come from an initial pool of 200M tokens, locked for that specific purpose. Once that pool dries up (after approximately 5 years), the reward will be lowered and the tokens minted using this program will be taken from the Supply Evolution.
+Those tokens will come from an initial pool of 200M tokens, locked for that specific purpose. Once that pool dries up at the end of the period, the reward will be lowered and the tokens minted using this program will be taken from the Supply Evolution.
 
 ## Supply evolution
 
