@@ -31,7 +31,7 @@ If technically possible (part under research):
 
 The exact details of the initial token distribution plan will be announced at a later date. Below is what is currently planned for the token distribution (can be subject to changes).
 
-To reward the NULS community and ecosystem, a large percntage of the supply will be airdropped to NULS token holders.
+To reward the NULS community and ecosystem, a large percentage of the supply will be distributed to NULS token holders through the POCM system.
 
 1,000,000,000 (1 billion) tokens will be issued initially.
 
