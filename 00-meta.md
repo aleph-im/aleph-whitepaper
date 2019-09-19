@@ -6,7 +6,7 @@ classoption:
 - oneside
 - notitlepage
 title: Aleph, a decentralized application network
-author: Moshe Malawach (<moshe.malawach@protonmail.com>)
+author: Moshe Malawach (<moshe@aleph.im>)
 date: \today
 geometry: margin=1in
 fontsize: 11pt
