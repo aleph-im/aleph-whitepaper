@@ -75,13 +75,13 @@ Those tokens will come from an initial pool of 200M tokens, locked for that spec
 
 ## Supply evolution
 
-Once the full network is ready (see roadmap chapter) and through the described rewards, the token supply will grow by approximately 10% the first year. Then the inflation rate will decrease by 2% each year until it reaches 4% per year and stay at that value.
+Once the full network is ready (see roadmap chapter) and through the described rewards, the token supply will grow by approximately 10% the first year. Then the inflation rate will decrease by 1% each year until it reaches 1% per year and stay at that value.
 
-|                |1st year|2nd year|3rd year|4th year|5th year|6th year|
-|---------------:|-------:|-------:|-------:|-------:|-------:|-------:|
-|       inflation|     10%|      8%|      6%|      4%|      4%|      4%|
-|   tokens minted|    100M|     88M|  71.28M|  50.37M|  52.38M|  54.48M|
-|total supply eoy|   1100M|   1188M|   1259M|   1309M|   1362M|   1416M|
+|                  | 1st year | 2nd year | 3rd year | 4th year | 5th year | 6th year |
+|------------------|----------|----------|----------|----------|----------|----------|
+| inflation        | 4%       | 3%       | 2%       | 1%       | 1%       | 1%       |
+| tokens minted    | 40M      | 31.2M    | 21.42M   | 10.92M   | 11.03M   | 11.14M   |
+| total supply eoy | 1040M    | 1071M    | 1092M    | 1103M    | 1114M    | 1125M    |
 
 Table: Supply per year
 
@@ -100,7 +100,7 @@ import seaborn
 
 fig, ax1 = plt.subplots()
 
-year_percents = [10, 8, 6, 4, 4, 4]
+year_percents = [4, 3, 2, 1, 1, 1]
 new_tokens = []
 supply = []
 last_supply = 1000
